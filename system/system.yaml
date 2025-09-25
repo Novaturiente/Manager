@@ -1,0 +1,172 @@
+# impl: http://github.com/blend-os/tracks/raw/main
+arch-repo: https://geo.mirror.pkgbuild.com
+repo: https://pkg-repo.blendos.co
+
+track: custom
+
+packages:
+  # ESSENTIAL - Base System & Core Functionality
+  - cpio                           
+  - linux      
+  - linux-firmware
+  - linux-headers                  
+  - openssl                        
+  - pacman-contrib                 
+  - xdg-user-dirs                  
+  - networkmanager
+
+  # From blendos-base
+  - archlinux-keyring
+  - bash
+  - coreutils
+  - file
+  - findutils
+  - gettext
+  - glibc
+  - grep
+  - gzip
+  - iproute2
+  - iputils
+  - pacman
+  - pciutils
+  - procps-ng
+  - psmisc
+  - sed
+  - shadow
+  - systemd
+  - tar
+  - util-linux
+  - gawk
+  - intel-ucode
+  - wpa_supplicant
+  - openssh
+  - rsync
+  - mkinitcpio
+  - e2fsprogs
+  - grub
+  - sudo
+  - usbutils
+  - base-devel
+  - git
+  - gcc-libs
+  - libusb-compat
+  - sof-firmware
+  - usb_modeswitch
+  - dnsmasq
+  - btrfs-progs
+  - f2fs-tools
+  - exfatprogs
+  - iptables
+  - iptables-nft
+  - cmake
+  
+  # ESSENTIAL - Display & Graphics (Critical for GUI)
+  - nvidia                    
+  - nvidia-utils                   
+  - nvidia-prime
+  - vulkan-icd-loader              
+  - wayland-protocols              
+  - xorg-xwayland                  
+  
+  # ESSENTIAL - Window Management & Compositors
+  - hyprland                       
+  - greetd
+  - greetd-gtkgreet
+  - greetd-tuigreet
+  - xdg-desktop-portal             
+  - xdg-desktop-portal-hyprland    
+  - xdg-desktop-portal-gtk
+  
+  # IMPORTANT 
+  - pipewire                       
+  - pipewire-pulse                 
+  - wireplumber                    
+  - tlp
+  - upower
+  
+  # RECOMMENDED - NVIDIA Features
+  - lib32-libglvnd                 
+  - lib32-nvidia-utils             
+  - nvidia-container-toolkit       
+  - nvidia-settings                
+  
+  # Hyprland Extras
+  - bibata-cursor-theme
+  - otf-font-awesome               
+  - hypridle                       
+  - hyprlock                       
+  - hyprpolkitagent                
+  - hyprutils                      
+  - rofi-wayland                   
+  - wpaperd
+  - stow                           
+  - udiskie
+  
+  # Multimedia
+  - blueman                        
+  - bluez-utils                    
+  
+  # Package & Application Management
+  - nix
+  - flatpak                        
+  - paru-bin
+  
+  # Tools
+  - nvtop
+  - zsh                            
+  - ghostty
+  - tmux                           
+  - neovim                         
+  - ranger
+
+  # Virtualization
+  - gnome-boxes
+  
+  # Web Browsers
+  - python-adblock                 
+  - qutebrowser                                   
+
+  # Compatibility (Gaming)
+  # - lutris
+  # - wine-staging                   
+  # - gamemode
+  # - gamescope
+  # - gnutls
+  # - lib32-vulkan-icd-loader
+  # - lib32-gnutls
+  # - vulkan-tools
+  #
+  # - libpulse
+  # - lib32-libpulse
+  # - lib32-mpg123
+  # - lib32-openal
+  #
+  # - libpng
+  # - lib32-libpng
+  # - libjpeg6-turbo
+  # - lib32-libjpeg6-turbo
+  # - libva
+  # - lib32-libva
+  # - libvdpau
+  # - lib32-libvdpau
+  #
+  # - openbox
+  # - xorg-server
+  # - xorg-xinit
+  # - xorg-xauth
+
+aur-packages:
+  - python-fake-useragent
+
+services:
+  - systemd-resolved
+  - NetworkManager
+  - bluetooth
+  - greetd
+  - flatpak
+  - tlp
+  - nix
+
+package-repos:
+  - name: 'chaotic-aur'
+    repo-url: 'https://geo-mirror.chaotic.cx/$repo/$arch'

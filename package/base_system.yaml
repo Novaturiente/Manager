@@ -1,0 +1,45 @@
+- cpio
+# - linux-zen
+# - linux-zen-headers
+- linux-firmware
+- pacman-contrib
+- xdg-user-dirs
+- networkmanager
+- intel-ucode
+- wpa_supplicant
+- openssh
+- rsync
+- base-devel
+- git
+- libusb-compat
+- sof-firmware
+- usb_modeswitch
+- dnsmasq
+- btrfs-progs
+- f2fs-tools
+- exfatprogs
+# - iptables
+- iptables-nft
+- cmake
+
+# - nvidia-open-dkms
+- nvidia-utils
+- lib32-nvidia-utils
+- nvidia-container-toolkit
+- nvidia-settings
+- lib32-libglvnd
+- vulkan-icd-loader
+
+- blueman
+- bluez-utils
+- pipewire
+- pipewire-pulse
+- wireplumber
+
+- 7zip
+- zip
+- unrar
+- unzip
+
+- sbctl
+- systemd-ukify

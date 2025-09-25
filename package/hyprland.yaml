@@ -1,0 +1,55 @@
+# - hyprland
+- greetd
+- greetd-tuigreet
+- wayland-protocols
+- xorg-xwayland
+- xwayland-satellite
+
+- #Hyprland Extras
+# - ags-hyprpanel-git
+# - hypridle
+# - hyprshade
+# - hyprpolkitagent
+# - hyprutils
+# - xdg-desktop-portal-hyprland
+- hyprlock
+- rofi
+- wpaperd
+- brightnessctl
+- stow
+- udiskie
+- kdeconnect
+- xdg-desktop-portal
+- network-manager-applet
+
+- grim
+- wl-clipboard
+- clipman
+- playerctl
+- slurp
+- swappy
+- zenity
+- wf-recorder
+- upower
+
+- bibata-cursor-theme
+# - otf-font-awesome
+# - adwaita-fonts
+- noto-fonts-emoji
+- ttf-jetbrains-mono-nerd
+- ttf-roboto-mono-nerd
+- ttf-iosevkaterm-nerd
+
+- fluent-icon-theme-git
+- materia-kde
+- materia-gtk-theme
+- nwg-look
+- kvantum
+
+- niri
+- swayidle
+- swaync
+- waybar
+
+- ghostty
+- swayosd

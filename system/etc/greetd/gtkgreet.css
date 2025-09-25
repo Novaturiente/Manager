@@ -1,0 +1,73 @@
+/* Global dark background and light text */
+* {
+    background-color: #1a1b26;
+    color: #c0caf5;
+    font-size: 12px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* Main window background */
+window {
+    background-color: #1a1b26;
+    color: #c0caf5;
+}
+
+/* Input fields */
+entry {
+    background-color: #24283b;
+    color: #c0caf5;
+    border: 1px solid #404869;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+entry:focus,
+entry:hover {
+    background-color: #292e42;
+    border: 1.5px solid #7aa2f7;
+}
+
+/* Buttons */
+row.activatable, check,
+radio, notebook > header > tabs > arrow, modelbutton.flat,
+.menuitem.button.flat,
+button {
+  transition-property: all, border-image, background-size, background-image;
+  transition-duration: 75ms, 225ms, 300ms, 1200ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  outline: none;
+  background-image: radial-gradient(circle, transparent 10%, transparent 0%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1000% 1000%;
+}
+
+row.activatable:active, check:active,
+radio:active, notebook > header > tabs > arrow:active, modelbutton.flat:active,
+.menuitem.button.flat:active,
+button:active {
+  transition-duration: 75ms, 225ms, 0ms, 0ms;
+  animation: ripple 225ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  background-size: 0% 0%;
+}
+
+/* Combo box styling */
+combobox,
+combobox button {
+    background-color: #24283b;
+    color: #c0caf5;
+    border-radius: 6px;
+}
+
+/* Text Labels */
+label {
+    color: #c0caf5;
+}
+
+box#body {
+    padding: 24px;
+    background: #1a1b26;
+    border-radius: 12px;
+}
+/* Optional: Main body box for padding */

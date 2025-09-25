@@ -1,0 +1,11 @@
+[Unit]
+Description=Set Deep Sleep State (Suspend-to-RAM)
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'echo deep > /sys/power/mem_sleep'
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
+
