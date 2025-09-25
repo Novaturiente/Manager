@@ -362,9 +362,13 @@ def copy_configurations():
 
     run_command(f"rm -rf /home/{original_user}/.config/doom")
 
+    run_command(
+        f"sudo -u {original_user} git clone --depth 1 https://github.com/Novaturiente/.dotfiles /home/{original_user}/.dotfiles"
+    )
+
     subprocess.run(
         f"sudo -u {original_user} stow -t /home/{original_user}/ nova",
-        cwd=os.path.dirname(script_dir),
+        cwd=os.path.dirname(f"/home/{original_user}/.dofiles"),
         shell=True,
     )
 
