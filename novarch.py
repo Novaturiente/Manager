@@ -97,9 +97,22 @@ def setup_check():
                 yaml.dump(data, f, sort_keys=False)
 
 
+def update_system():
+    print(f"{blue_gear} Updating system")
+    paru_check = os.popen("pacman -Q reflector").readlines()
+    if len(paru_check) == 0:
+        print(f"{yellow_warning} reflector not installed installing now")
+        run_command("pacman -S --noconfirm reflector")
+    run_command(
+        "reflector --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
+    )
+    run_command("pacman -Syu --noconfirm")
+
+
 def chaotic_aur_setup():
     multilib_enabled = False
     chaotic_installed = False
+    update_system()
     with open("/etc/pacman.conf", "r") as f:
         lines = f.readlines()
 
@@ -138,18 +151,6 @@ def chaotic_aur_setup():
             f.write("Include = /etc/pacman.d/chaotic-mirrorlist\n")
 
         run_command("pacman -Syu --noconfirm")
-
-
-def update_system():
-    print(f"{blue_gear} Updating system")
-    paru_check = os.popen("pacman -Q reflector").readlines()
-    if len(paru_check) == 0:
-        print(f"{yellow_warning} reflector not installed installing now")
-        run_command("pacman -S --noconfirm reflector")
-    run_command(
-        "reflector --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
-    )
-    run_command("pacman -Syu --noconfirm")
 
 
 def get_selected(package_folder, package_file):
@@ -374,7 +375,8 @@ def copy_configurations():
 
     # Install tmux tpm
     run_command(
-        "git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm", False
+        f"git clone https://github.com/tmux-plugins/tpm /home/{original_user}/.tmux/plugins/tpm",
+        False,
     )
 
     run_command("systemctl enable greetd")
