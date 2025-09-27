@@ -1,6 +1,6 @@
 # - hyprland
-- greetd
-- greetd-tuigreet
+# - greetd
+# - greetd-tuigreet
 - wayland-protocols
 - xorg-xwayland
 - xwayland-satellite

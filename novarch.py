@@ -334,8 +334,8 @@ def manage_packages():
 def copy_configurations():
 
     # Copy system configurations
-    file = os.path.join(script_dir, "system/etc/greetd/config.toml")
-    run_command(f"cp {file} /etc/greetd/config.toml", False)
+    # file = os.path.join(script_dir, "system/etc/greetd/config.toml")
+    # run_command(f"cp {file} /etc/greetd/config.toml", False)
 
     file = os.path.join(
         script_dir, "system/etc/modprobe.d/nvidia-power-management.conf"
@@ -379,7 +379,7 @@ def copy_configurations():
         False,
     )
 
-    run_command("systemctl enable greetd")
+    run_command("systemctl enable ly")
 
     run_command("cp novarch /usr/bin/novarch")
 
