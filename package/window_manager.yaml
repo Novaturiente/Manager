@@ -32,14 +32,12 @@
 - wf-recorder
 - upower
 
-- bibata-cursor-theme
-# - otf-font-awesome
-# - adwaita-fonts
 - noto-fonts-emoji
 - ttf-jetbrains-mono-nerd
 - ttf-roboto-mono-nerd
 - ttf-iosevkaterm-nerd
 
+- bibata-cursor-theme
 - fluent-icon-theme-git
 - materia-kde
 - materia-gtk-theme
@@ -50,6 +48,5 @@
 - swayidle
 - swaync
 - waybar
-
-- ghostty
 - swayosd
+- ly

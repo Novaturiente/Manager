@@ -31,6 +31,6 @@
 - dxvk-mingw-git
 - vkd3d
 
-- wine
-- wine-mono
+- wine-cachyos
 - winetricks
+- protonup-qt
