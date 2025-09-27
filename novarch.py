@@ -381,6 +381,8 @@ def copy_configurations():
 
     run_command("systemctl enable ly")
 
+    run_command(f"sudo -u {original_user} systemctl --user enable batsignal.service")
+
     run_command("cp novarch /usr/bin/novarch")
 
     run_command(f"chsh {original_user} -s $(which zsh)")
