@@ -106,7 +106,7 @@ def update_system():
     run_command(
         "reflector --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
     )
-    run_command("pacman -Syu --noconfirm")
+    run_command("paru -Syu --noconfirm")
 
 
 def chaotic_aur_setup():
